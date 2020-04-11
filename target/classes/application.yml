@@ -1,0 +1,26 @@
+server:
+  port: 7788
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #master
+    master:
+      url: jdbc:mysql://192.168.188.128:3339/uqierp?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;tinyInt1isBit=false&amp;allowMultiQueries=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      max-idle: 10
+      max-wait: 10000
+      min-idle: 5
+      initial-size: 5
+    #从数据库slave
+    slave:
+      url: jdbc:mysql://192.168.188.128:3340/uqierp?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;tinyInt1isBit=false&amp;allowMultiQueries=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      max-idle: 10
+      max-wait: 10000
+      min-idle: 5
+      initial-size: 5
+
